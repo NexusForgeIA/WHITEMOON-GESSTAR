@@ -794,6 +794,11 @@ section{padding:100px 0}
   background:rgba(255,255,255,.2);
   border-radius:3px;
 }
+.servicios-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:24px;
+}
 .servicio-card{
   background:var(--card);
   border:1px solid var(--border2);
@@ -1540,7 +1545,7 @@ footer{background:var(--negro);padding:50px 0 26px;border-top:3px solid var(--ro
       <li><a href="#inicio">Inicio</a></li>
       <li><a href="#servicios">Servicios</a></li>
       <li><a href="#nosotros">Nosotros</a></li>
-      <li><a href="#servicios" data-go-tab="moves">Plan Moves</a></li>
+      <li><a href="#faq">Preguntas</a></li>
       <li><a href="#contacto">Contacto</a></li>
       <li><a href="#contacto" class="btn btn-rojo" onclick="toggleChat();return false;">Consulta gratuita</a></li>
     </ul>
@@ -1575,284 +1580,83 @@ footer{background:var(--negro);padding:50px 0 26px;border-top:3px solid var(--ro
   <div class="container">
     <div class="section-head">
       <div class="section-tag">Nuestros servicios</div>
-      <h2 class="section-title">Especialistas en trámites DGT</h2>
-      <p class="section-sub">Gestionamos trámites de tráfico, transportes y subvenciones para particulares y empresas con inteligencia artificial.</p>
+      <h2 class="section-title">Gestoría administrativa y asesoría jurídica</h2>
+      <p class="section-sub">De los trámites de tráfico a la asesoría jurídica integral. En Gesstar Gestores cubrimos todas tus gestiones administrativas y legales con un único equipo de confianza.</p>
     </div>
 
-    <div class="tabs-nav">
-      <button class="tab-btn active" data-tab="transferencias">Transferencias</button>
-      <button class="tab-btn" data-tab="electricos">Matrícula Eléctricos</button>
-      <button class="tab-btn" data-tab="patinetes">Patinetes VMP</button>
-      <button class="tab-btn" data-tab="transportes">Transportes</button>
-      <button class="tab-btn" data-tab="moves">Plan Moves</button>
-    </div>
-
-    <!-- TAB 1 TRANSFERENCIAS -->
-    <div class="tab-content active" id="tab-transferencias">
-      <div class="servicio-detail">
-        <div class="servicio-detail-main">
-          <div class="subtitle">Transferencias en Benidorm y Alicante</div>
-          <h3>Transferencia de Vehículos</h3>
-          <p class="lead">Gestionamos el cambio de titularidad de tu vehículo ante la DGT sin que tengas que desplazarte. Más de 5.000 transferencias realizadas.</p>
-
-          <div class="block-title">Documentación necesaria</div>
-          <ul class="check-list">
-            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>DNI/NIE comprador y vendedor</li>
-            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Contrato de compraventa del vehículo</li>
-            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Permiso de circulación original</li>
-            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Ficha técnica del vehículo</li>
-            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Justificante pago impuesto municipal (IVTM)</li>
-            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Último recibo del seguro (opcional)</li>
-          </ul>
-
-          <div class="block-title">Proceso en 4 pasos</div>
-          <div class="process-steps steps-4">
-            <div class="process-step tab-step">
-              <div class="step-ico"><svg viewBox="0 0 24 24" style="width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:1.8"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div>
-              <div class="step-num-sm">PASO 1</div>
-              <p>Hablas con nuestro agente IA</p>
-            </div>
-            <div class="process-step tab-step">
-              <div class="step-ico"><svg viewBox="0 0 24 24" style="width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:1.8"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
-              <div class="step-num-sm">PASO 2</div>
-              <p>Revisamos y cerramos presupuesto</p>
-            </div>
-            <div class="process-step tab-step">
-              <div class="step-ico"><svg viewBox="0 0 24 24" style="width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
-              <div class="step-num-sm">PASO 3</div>
-              <p>Envías docs a gestoria@gesstar.com</p>
-            </div>
-            <div class="process-step tab-step">
-              <div class="step-ico"><svg viewBox="0 0 24 24" style="width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:1.8"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><polyline points="9 15 11 17 15 13"/></svg></div>
-              <div class="step-num-sm">PASO 4</div>
-              <p>Vehículo transferido</p>
-            </div>
-          </div>
+    <div class="servicios-grid">
+      <div class="servicio-card">
+        <div class="servicio-body">
+          <div class="servicio-icon" style="font-size:26px;line-height:1">🚗</div>
+          <h3>Transferencias de Vehículos</h3>
+          <p>Cambio de titularidad de vehículos ante la DGT de forma ágil y sin desplazamientos. Revisamos la documentación y tramitamos todo el proceso por ti.</p>
+          <button onclick="abrirChatITP();return false;" class="itp-btn" style="display:inline-flex;align-items:center;gap:8px;padding:10px 18px;background:transparent;border:2px solid var(--rojo);border-radius:10px;color:var(--rojo);font-family:'Barlow Condensed',sans-serif;font-size:.85rem;font-weight:700;cursor:pointer;transition:all .2s;letter-spacing:.04em">Calcular mi ITP →</button>
         </div>
-        <div class="servicio-detail-side">
-          <div class="block-title">Información clave</div>
-          <div class="alert-box">
-            <svg viewBox="0 0 24 24"><polyline points="8 21 12 17 16 21"/><path d="M9 7H5a2 2 0 00-2 2v1a4 4 0 004 4h1m6-7h4a2 2 0 012 2v1a4 4 0 01-4 4h-1"/><path d="M12 17V7M9 7h6"/></svg>
-            <div><strong>27 años de experiencia</strong><p>Transferencias gestionadas de forma ágil y personalizada.</p></div>
-          </div>
-          <div class="info-box">
-            <div class="info-row"><span>Plazo</span><strong>24-48 horas</strong></div>
-            <div class="info-row"><span>Honorarios gestoría</span><strong>140€</strong></div>
-            <div class="info-row"><span>Tasas DGT</span><span style="color:#fff">incluidas</span></div>
-            <div class="info-row"><span>Modalidad</span><span style="color:#fff">100% online</span></div>
-          </div>
-          <button onclick="abrirChatITP();return false;" class="itp-btn" style="display:inline-flex;align-items:center;gap:8px;padding:11px 20px;background:transparent;border:2px solid #c8960c;border-radius:10px;color:#c8960c;font-family:'Barlow Condensed',sans-serif;font-size:.9rem;font-weight:700;cursor:pointer;transition:all .2s;margin-top:12px;letter-spacing:.04em">
-            <svg viewBox="0 0 24 24" style="width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2">
-              <rect x="4" y="2" width="16" height="20" rx="2"/>
-              <line x1="8" y1="6" x2="16" y2="6"/>
-              <line x1="8" y1="10" x2="16" y2="10"/>
-              <line x1="8" y1="14" x2="12" y2="14"/>
-            </svg>
-            Calcular mi ITP →
-          </button>
-          <div style="font-size:.68rem;color:#666;margin-top:6px">Calcula el ITP de tu transferencia según tu Comunidad Autónoma</div>
-          <div style="font-size:.62rem;color:#555;margin-top:2px;line-height:1.5">Comunidad Valenciana 4% · y todas las comunidades (cálculo según tablas BOE)</div>
-          <div class="cta-row">
-            <a href="#contacto" class="btn btn-rojo" style="flex:1" onclick="toggleChat();return false;">Solicitar transferencia</a>
-          </div>
+      </div>
+      <div class="servicio-card">
+        <div class="servicio-body">
+          <div class="servicio-icon" style="font-size:26px;line-height:1">🚦</div>
+          <h3>Tráfico y Transporte</h3>
+          <p>Gestión integral de trámites de tráfico, autorizaciones y tarjetas de transporte para particulares, autónomos y empresas del sector.</p>
+        </div>
+      </div>
+      <div class="servicio-card">
+        <div class="servicio-body">
+          <div class="servicio-icon" style="font-size:26px;line-height:1">📊</div>
+          <h3>Asesoría Fiscal y Laboral</h3>
+          <p>Asesoramiento fiscal, contable y laboral para autónomos y empresas. Te acompañamos en tus declaraciones, nóminas y obligaciones con la Administración.</p>
+        </div>
+      </div>
+      <div class="servicio-card">
+        <div class="servicio-body">
+          <div class="servicio-icon" style="font-size:26px;line-height:1">⚖️</div>
+          <h3>Derecho Civil</h3>
+          <p>Asesoramiento y representación en reclamaciones, contratos y conflictos entre particulares, con un trato cercano en cada caso.</p>
+        </div>
+      </div>
+      <div class="servicio-card">
+        <div class="servicio-body">
+          <div class="servicio-icon" style="font-size:26px;line-height:1">🏢</div>
+          <h3>Derecho Mercantil</h3>
+          <p>Constitución de sociedades, contratos mercantiles y asesoramiento jurídico continuado para empresas y negocios.</p>
+        </div>
+      </div>
+      <div class="servicio-card">
+        <div class="servicio-body">
+          <div class="servicio-icon" style="font-size:26px;line-height:1">🏠</div>
+          <h3>Derecho Inmobiliario</h3>
+          <p>Compraventas, arrendamientos y toda la gestión jurídica relacionada con la propiedad inmobiliaria y los bienes raíces.</p>
+        </div>
+      </div>
+      <div class="servicio-card">
+        <div class="servicio-body">
+          <div class="servicio-icon" style="font-size:26px;line-height:1">📜</div>
+          <h3>Herencias</h3>
+          <p>Tramitación de herencias, testamentos y adjudicación de bienes, acompañándote en cada paso del proceso sucesorio.</p>
+        </div>
+      </div>
+      <div class="servicio-card">
+        <div class="servicio-body">
+          <div class="servicio-icon" style="font-size:26px;line-height:1">👨‍👩‍👧</div>
+          <h3>Derecho de Familia</h3>
+          <p>Separaciones, divorcios, custodias y acuerdos familiares gestionados con discreción, cercanía y total confidencialidad.</p>
+        </div>
+      </div>
+      <div class="servicio-card">
+        <div class="servicio-body">
+          <div class="servicio-icon" style="font-size:26px;line-height:1">🛡️</div>
+          <h3>Derecho Penal</h3>
+          <p>Defensa y asistencia jurídica en procedimientos penales, con atención personalizada y seguimiento de principio a fin.</p>
+        </div>
+      </div>
+      <div class="servicio-card">
+        <div class="servicio-body">
+          <div class="servicio-icon" style="font-size:26px;line-height:1">🏛️</div>
+          <h3>Derecho Administrativo</h3>
+          <p>Recursos, sanciones y trámites frente a las administraciones públicas, defendiendo tus intereses con rigor.</p>
         </div>
       </div>
     </div>
-
-    <!-- TAB 2 ELÉCTRICOS -->
-    <div class="tab-content" id="tab-electricos">
-      <div class="servicio-detail">
-        <div class="servicio-detail-main">
-          <div class="subtitle">Especialistas en vehículos de nueva energía</div>
-          <h3>Matriculación Vehículos Eléctricos</h3>
-          <p class="lead">Tramitamos la matriculación de coches eléctricos, híbridos enchufables y de pila de combustible. Gestionamos todo el proceso ante la DGT incluyendo placas y documentación.</p>
-
-          <div class="block-title">Tipos de vehículos</div>
-          <ul class="arrow-list">
-            <li><strong>Coches 100% eléctricos</strong> (BEV)</li>
-            <li><strong>Híbridos enchufables</strong> (PHEV)</li>
-            <li><strong>Híbridos</strong> (HEV)</li>
-            <li><strong>Pila de combustible</strong> (FCEV)</li>
-            <li>Motocicletas eléctricas</li>
-            <li>Furgonetas y vehículos comerciales eléctricos</li>
-          </ul>
-
-          <div class="block-title">Documentación necesaria</div>
-          <ul class="check-list">
-            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Factura de compra del vehículo</li>
-            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Certificado de conformidad (CoC)</li>
-            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>DNI/NIE del comprador</li>
-            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Justificante del seguro</li>
-            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Ficha de homologación técnica</li>
-          </ul>
-        </div>
-        <div class="servicio-detail-side">
-          <div class="block-title">Ventajas adicionales</div>
-          <ul class="arrow-list">
-            <li>Compatibilidad con <strong>Plan Moves 2025</strong></li>
-            <li>Exención de impuesto de matriculación</li>
-            <li>Descuentos en impuesto de circulación</li>
-            <li>Acceso a zonas de bajas emisiones</li>
-          </ul>
-          <div class="info-box">
-            <div class="info-row"><span>Plazo</span><strong>3-7 días laborables</strong></div>
-            <div class="info-row"><span>Precio orientativo</span><strong>desde 150€</strong></div>
-            <div class="info-row"><span>Tasas DGT</span><span style="color:#fff">aparte</span></div>
-          </div>
-          <div class="cta-row">
-            <a href="#contacto" class="btn btn-rojo" style="flex:1" onclick="toggleChat();return false;">Matricular eléctrico</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- TAB 3 PATINETES -->
-    <div class="tab-content" id="tab-patinetes">
-      <div class="servicio-detail">
-        <div class="servicio-detail-main">
-          <div class="subtitle">Obligatorio desde enero 2024</div>
-          <h3>Inscripción Patinetes y VMP en la DGT</h3>
-
-          <div class="alert-box">
-            <svg viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-            <div><strong>Atención: multas de hasta 500€</strong><p>Circular sin inscripción puede suponer sanciones graves.</p></div>
-          </div>
-
-          <p class="lead">La inscripción de Vehículos de Movilidad Personal (VMP) en el Registro de la DGT es obligatoria desde el 22 de enero de 2024. Gestionamos todo el proceso de forma rápida y sencilla.</p>
-
-          <div class="block-title">Trámites disponibles</div>
-          <ul class="arrow-list">
-            <li><strong>Inscripción inicial</strong> — Alta en el registro VMP</li>
-            <li><strong>Cambio de titular</strong> — Por compraventa</li>
-            <li><strong>Baja definitiva</strong> — Por robo, pérdida o desuso</li>
-            <li><strong>Duplicado documentación</strong> — Por extravío</li>
-          </ul>
-
-          <div class="block-title">Marcas más frecuentes</div>
-          <div class="brand-chips">
-            <span class="brand-chip">Xiaomi</span>
-            <span class="brand-chip">Cecotec</span>
-            <span class="brand-chip">Segway</span>
-            <span class="brand-chip">Ninebot</span>
-            <span class="brand-chip">Pure Electric</span>
-            <span class="brand-chip">Hiboy</span>
-            <span class="brand-chip">Ducati</span>
-            <span class="brand-chip">Isinwheel</span>
-            <span class="brand-chip">Kaiku</span>
-            <span class="brand-chip">y cualquier marca</span>
-          </div>
-
-          <div class="block-title">Documentación necesaria</div>
-          <ul class="check-list">
-            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>DNI/NIE del propietario</li>
-            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Factura de compra o contrato compraventa</li>
-            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Certificado de conformidad del fabricante</li>
-            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Manual técnico del vehículo</li>
-            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Fotografías del patinete (3 vistas)</li>
-          </ul>
-        </div>
-        <div class="servicio-detail-side">
-          <div class="block-title">Precios</div>
-          <div class="price-grid">
-            <div class="price-row"><span>Inscripción nueva</span><strong>desde 50€</strong></div>
-            <div class="price-row"><span>Cambio de titular</span><strong>desde 40€</strong></div>
-            <div class="price-row"><span>Baja</span><strong>desde 30€</strong></div>
-            <div class="price-row"><span>Duplicado</span><strong>desde 25€</strong></div>
-          </div>
-          <div class="info-box">
-            <div class="info-row"><span>Plazo</span><strong>24-48 horas</strong></div>
-            <div class="info-row"><span>Modalidad</span><span style="color:#fff">100% online</span></div>
-          </div>
-          <div class="cta-row">
-            <a href="#contacto" class="btn btn-rojo" style="flex:1" onclick="toggleChat();return false;">Inscribir mi patinete</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- TAB 4 TRANSPORTES -->
-    <div class="tab-content" id="tab-transportes">
-      <div class="servicio-detail">
-        <div class="servicio-detail-main">
-          <div class="subtitle">Profesionales del sector</div>
-          <h3>Gestión de Transporte Profesional</h3>
-          <p class="lead">Gestionamos todos los trámites de transporte para empresas, autónomos y profesionales del sector en Benidorm, Alicante y la Comunidad Valenciana.</p>
-
-          <div class="block-title">Servicios</div>
-          <ul class="arrow-list">
-            <li><strong>Tarjetas de transporte</strong> — alta, visado, renovación</li>
-            <li>Autorizaciones de transporte de viajeros</li>
-            <li>Autorizaciones de transporte de mercancías</li>
-            <li><strong>Permiso de conductor VTC</strong></li>
-            <li>Licencias de taxi y VTC</li>
-            <li>Concesiones y habilitaciones</li>
-          </ul>
-
-          <div class="block-title">Tarjetas de transporte en detalle</div>
-          <p class="lead" style="margin-bottom:14px">Gestionamos el alta, visado y renovación de tarjetas de transporte para camiones, furgonetas y vehículos de gran tonelaje. Conocemos todos los plazos y requisitos de la Comunidad Valenciana.</p>
-        </div>
-        <div class="servicio-detail-side">
-          <div class="block-title">¿Tarjeta caducada?</div>
-          <div class="alert-box">
-            <svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-            <div><strong>Visados urgentes</strong><p>Atendemos visados con prioridad. Consulta tu fecha de caducidad.</p></div>
-          </div>
-          <div class="info-box">
-            <div class="info-row"><span>Plazo visado</span><span style="color:#fff">según caducidad</span></div>
-            <div class="info-row"><span>Cobertura</span><strong>Comunidad Valenciana</strong></div>
-            <div class="info-row"><span>Modalidad</span><span style="color:#fff">empresas y autónomos</span></div>
-          </div>
-          <div class="cta-row">
-            <a href="#contacto" class="btn btn-rojo" style="flex:1" onclick="toggleChat();return false;">Consultar urgente</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- TAB 5 PLAN MOVES -->
-    <div class="tab-content" id="tab-moves">
-      <div class="servicio-detail">
-        <div class="servicio-detail-main">
-          <div class="subtitle">Gestionamos tu subvención completa</div>
-          <h3>Plan Moves III — Hasta 7.000€</h3>
-          <p class="lead">Gestionamos la solicitud completa de la ayuda Plan Moves III ante la Comunidad Valenciana para la compra de vehículos eléctricos e híbridos enchufables.</p>
-
-          <div class="block-title">Importes por categoría</div>
-          <div class="amount-grid">
-            <div class="amount-row"><span>Turismo eléctrico <strong style="color:#fff">con achatarramiento</strong></span><strong>7.000€</strong></div>
-            <div class="amount-row"><span>Turismo eléctrico <strong style="color:#fff">sin achatarramiento</strong></span><strong>4.500€</strong></div>
-            <div class="amount-row"><span>Moto eléctrica <strong style="color:#fff">con achatarramiento</strong></span><strong>1.100€</strong></div>
-            <div class="amount-row"><span>Moto eléctrica <strong style="color:#fff">sin achatarramiento</strong></span><strong>750€</strong></div>
-            <div class="amount-row"><span>Cuadriciclo eléctrico</span><strong>hasta 4.000€</strong></div>
-          </div>
-
-          <div class="block-title">Requisitos principales</div>
-          <ul class="check-list">
-            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Vehículo eléctrico puro o PHEV</li>
-            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Precio máximo según categoría</li>
-            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Solicitud ANTES de la entrega del vehículo</li>
-            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Domicilio en España</li>
-          </ul>
-        </div>
-        <div class="servicio-detail-side">
-          <div class="block-title">Nuestro proceso</div>
-          <div class="process-steps" style="grid-template-columns:1fr;gap:10px">
-            <div class="process-step" style="text-align:left;display:flex;gap:12px;align-items:center;padding:12px 16px"><div class="step-num" style="margin:0">1</div><p style="text-align:left">Verificamos si tu vehículo es elegible</p></div>
-            <div class="process-step" style="text-align:left;display:flex;gap:12px;align-items:center;padding:12px 16px"><div class="step-num" style="margin:0">2</div><p style="text-align:left">Preparamos toda la documentación</p></div>
-            <div class="process-step" style="text-align:left;display:flex;gap:12px;align-items:center;padding:12px 16px"><div class="step-num" style="margin:0">3</div><p style="text-align:left">Presentamos la solicitud</p></div>
-            <div class="process-step" style="text-align:left;display:flex;gap:12px;align-items:center;padding:12px 16px"><div class="step-num" style="margin:0">4</div><p style="text-align:left">Seguimiento hasta el cobro</p></div>
-          </div>
-          <div class="alert-box">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-            <div><p style="margin:0"><strong style="display:inline">Importante:</strong> muchos concesionarios ya lo tramitan. Si el tuyo no lo hace, nosotros lo gestionamos por ti.</p></div>
-          </div>
-          <div class="cta-row">
-            <a href="#contacto" class="btn btn-rojo" style="flex:1" onclick="toggleChat();return false;">Solicitar Plan Moves</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
   </div>
 </section>
 
